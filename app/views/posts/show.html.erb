@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<%if user_signed_in? %>
+  <h1>Author:</h1>
+  <h1><%= @post.user.username %></h1>
+<%end%>
+
+<p>
+  <strong>Post:</strong>
+  <%= @post.post %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
